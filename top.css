@@ -1,0 +1,63 @@
+﻿body {
+    
+ margin: 0;
+}
+
+#div1, #div2, #div3,#div4,#div5,#div6,#div7,#div8,#div9,#div10{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 30px;
+}
+
+#div1 {
+    background-color: lightblue;
+    
+
+}
+#div2 {
+    background-color: rgb(24, 207, 48);
+   
+}
+#div3 {
+    background-color: rgb(42, 24, 207);
+    color: wheat;
+}
+#div4 {
+    background-color: rgb(207, 24, 125);
+}
+#div5 {
+    background-color: rgb(223, 25, 25);
+}
+#div6 {
+    background-color: rgb(94, 24, 207);
+}
+#div7 {
+    background-color: rgb(24, 180, 207);
+}
+#div8 {
+    background-color: rgb(207, 24, 125);
+}
+#div9 {
+    background-color: rgb(22, 223, 15);
+}
+#div10 {
+    background-color: rgb(233, 236, 13);
+}
+    #container{
+        
+        width:300px;
+        height: 300px;
+        position: relative;
+        background: red;
+       
+      }
+      #animate {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: black;
+        text-align: center;
+      }

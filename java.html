@@ -1,0 +1,188 @@
+﻿<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="./sweetalert2.min.css">
+    <script src="./sweetalert2.min.js"></script>
+
+</head>
+
+<body>
+    <div id="div1">
+        <h2>เทคนิคที่1</h2>
+        <h2>แสดงวันเวลา</h2>
+
+        <button type="button" onclick="document.getElementById('kim').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+
+        <p id="kim"></p>
+    </div>
+
+    <div id="div2">
+        <h2>เทคนิคที่2</h2>
+        <h2> คลิกแล้วตัวหนังสือจะปรับขนาดใหญ่ขึ้น</h2>
+        <p id="demo">สาขาวิทยาการคอมพิวเตอร์ รุ่นที่ 16</p>
+
+        <button type="button" onclick="document.getElementById('demo').style.fontSize='60px'">คลิกที่นี่!</button>
+    </div>
+    <div id="div3">
+        <h2>เทคนิคที่3</h2>
+        <h2> คลิกแล้วตัวหนังสือจะปรับขนาดเล็กลง</h2>
+        <p id="de">สาขาวิทยาการคอมพิวเตอร์ รุ่นที่ 16</p>
+
+        <button type="button" onclick="document.getElementById('de').style.fontSize='10px'">คลิกที่นี่!</button>
+    </div>
+    <div id="div4">
+        <h1>เทคนิคที่ 4</h1>
+        <h2>แสดงเนื้อหาที่ซ่อนอยู่</h2>
+        <p>คลิกปุ่มเพื่อแสดงเนื้อหา</p>
+        <button onclick="toggleShow()">Click</button>
+        <p id="isShow"></p>
+
+        <script>
+            function toggleShow() {
+                document.getElementById("isShow").innerHTML = "Hi MyFriend ";
+            }
+        </script>
+    </div>
+
+    <div id="div5">
+
+        <h2>เทคนิคที่ 5 เพิ่มข้อความซ้ำๆ</h2>
+        <button onclick="my()">คลิก</button>
+
+        <p id="dmo"></p>
+
+        <script>
+            var fruits = ["hi myFriend"];
+            document.getElementById("dmo").innerHTML = fruits;
+
+            function my() {
+                fruits.push("kim,jame,kimkub");
+                document.getElementById("dmo").innerHTML = fruits;
+            }
+        </script>
+    </div>
+
+    <div id="div6">
+        <h1>เทคนิคที่ 6</h1>
+        <h2>ตัวอักษรวิ่ง</h2>
+        <button onclick="typeWriter()">คลิกเพื่อแสดง</button>
+
+        <p id="demoo"></p>
+
+        <script>
+            var i = 0;
+            var txt = `ณ ป่าแห่งหนึ่ง ลิงฝูงหนึ่งปรึกษาหารือกันว่าพวกมันจะไปอยู่ที่ไหนกันดี ระหว่างในป่ากับในเมือง 
+                        ระหว่างที่รอการตัดสินใจ ลิงอาวุโสที่สุดในฝูงก็พูดขึ้นมาว่า "ข้าไม่รู้หรอกนะว่าพวกเจ้าจะตัดสินใจกันอย่างไร แต่ที่ข้ารู้แน่ ๆ 
+                        คือถ้าพวกเจ้าก้าวขาข้ามกำแพงเมืองไปแล้วล่ะก็มันจะเป็นเรื่องง่ายมากที่พวกมนุษย์จะจับเจ้า"`;
+            var speed = 200;
+
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demoo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+        </script>
+    </div>
+
+    <div id="div7">
+
+        <h2>เทคนิคที่7</h2>
+        <h2>เปิดปิดไฟ</h2>
+
+
+        <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+
+        <img id="myImage" src="https://www.w3schools.com/js/pic_bulbon.gif" style="width:100px">
+
+        <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+
+    </div>
+
+    <div id="div8">
+        <h2>เทคนิคที่ 8</h2>
+        <h2>ใส่รูปภาพ</h2>
+        <button onclick="w3()">Click</button>
+        <script>
+            function w3() {
+                swal({
+                    title: '15 สาวแว่นจากโลกอนิเมะ',
+                    text: '',
+                    imageUrl: 'http://www.metalbridges.com/wp-content/uploads/2016/11/Top-Character-Girls-with-Glasses-in-Anime_00.jpg',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    animation: false
+                });
+            }
+        </script>
+    </div>
+
+    <div id="div9">
+        <h1>เทคนิคที่ 9</h1>
+        <h2>แสดง Alert คำถามให้ตอบว่า Yes or No</h2>
+        <button onclick="wk()">Click</button>
+        <script>
+            function wk() {
+                swal({
+
+                    title: 'คุณเป็นสุนัข ใช่ไหม',
+                    text: "",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No',
+                }).then((result) => {
+                    if (result.value) {
+                        swal(
+                            'บางแก้ว',
+                            'ใช่',
+                            'success'
+                        )
+                    }
+                })
+            }
+        </script>
+    </div>
+
+
+    <div id="div10">
+        <h2>เทคนิคที่10</h2>
+        <h2> คลิกแล้วกล่องเลื่อง</h2>
+        <p>
+            <button onclick="myMove()">Click Me</button>
+        </p>
+
+        <div id="container">
+            <div id="animate"></div>
+
+        </div>
+
+        <script>
+            function myMove() {
+                var elem = document.getElementById("animate");
+                var pos = 0;
+                var id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 270) {
+                        clearInterval(id);
+                    } else {
+                        pos++;
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                    }
+                }
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>
